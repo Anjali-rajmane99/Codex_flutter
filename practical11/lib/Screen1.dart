@@ -14,7 +14,7 @@ class _Screen1State extends State<Screen1> {
     if (count >= 1) {
       return Center(
         child: Text(
-          "Profile",
+          "Andrew Rubin",
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
       );
@@ -27,16 +27,15 @@ class _Screen1State extends State<Screen1> {
     if (count >= 2) {
       return Center(
         child: Container(
-          margin: EdgeInsets.only(top: 20),
           height: 200,
           width: 200,
           decoration: BoxDecoration(
-            image: DecorationImage(
-                image: NetworkImage(
-                    "https://media.gq-magazine.co.uk/photos/5e691382a4490f000820d1bb/16:9/w_2560%2Cc_limit/20200311-Rubin-08.jpg"),
-                fit: BoxFit.cover),
-            borderRadius: BorderRadius.all(Radius.circular(200)),
-          ),
+              image: DecorationImage(
+                  image: NetworkImage(
+                    "https://vz.cnwimg.com/wp-content/uploads/2012/08/Andy-Rubin-1.jpg",
+                  ),
+                  fit: BoxFit.cover),
+              borderRadius: BorderRadius.all(Radius.circular(200))),
         ),
       );
     } else {
@@ -47,10 +46,23 @@ class _Screen1State extends State<Screen1> {
   Widget mySkills() {
     if (count >= 3) {
       return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "Skills",
+            "About Me : Hello Im Andrew Rubin & Im the Founder of Android Operating System",
             style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Container(
+                margin: EdgeInsets.only(top: 20),
+                child: Text(
+                  "Languages :",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+              ),
+            ],
           ),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
@@ -58,59 +70,91 @@ class _Screen1State extends State<Screen1> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  child: Text(
-                    "Resume",
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                  padding: EdgeInsets.only(bottom: 20),
-                  margin: EdgeInsets.only(right: 20, top: 40),
-                  height: 200,
-                  width: 150,
+                  margin: EdgeInsets.only(right: 20, top: 20),
+                  height: 100,
+                  width: 100,
                   decoration: BoxDecoration(
                     color: Colors.amber,
                     image: DecorationImage(
                         image: NetworkImage(
-                            "https://cdn.slidesharecdn.com/ss_thumbnails/08fcba70-c789-4984-b279-74d00fea408f-170103111935-thumbnail.jpg?width=640&"),
+                            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_MgCfd5M95miAoTbUKEtYJcpOToGAPgprYg&s"),
                         fit: BoxFit.cover),
                   ),
                 ),
                 Container(
-                  child: Text(
-                    "Certificate",
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                  padding: EdgeInsets.only(bottom: 180),
-                  margin: EdgeInsets.only(right: 20, top: 40),
-                  height: 200,
-                  width: 150,
+                  margin: EdgeInsets.only(right: 20, top: 20),
+                  height: 100,
+                  width: 100,
                   decoration: BoxDecoration(
                     color: Colors.amber,
                     image: DecorationImage(
                         image: NetworkImage(
-                            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNXqGM3gimPK1RPgtlEit3SCG_BspBjJY7vg&s"),
+                            "https://t4.ftcdn.net/jpg/03/43/24/89/360_F_343248987_nz1UYNmMzye2piGPooEQmDnaI1m1PBF2.jpg"),
                         fit: BoxFit.cover),
                   ),
                 ),
                 Container(
-                  child: Text(
-                    "Markshit",
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                  padding: EdgeInsets.only(bottom: 20),
-                  margin: EdgeInsets.only(right: 20, top: 40),
-                  height: 200,
-                  width: 150,
+                  margin: EdgeInsets.only(right: 20, top: 20),
+                  height: 100,
+                  width: 100,
                   decoration: BoxDecoration(
                     color: Colors.amber,
                     image: DecorationImage(
                         image: NetworkImage(
-                            "https://imgv2-2-f.scribdassets.com/img/document/546913894/original/35769bf594/1721973033?v=1"),
+                            "https://www.shutterstock.com/image-photo/python-programming-language-programing-workflow-260nw-1846209262.jpg"),
                         fit: BoxFit.cover),
                   ),
                 ),
               ],
             ),
-          )
+          ),
+        ],
+      );
+    } else {
+      return Container();
+    }
+  }
+
+  Widget technoLogies() {
+    if (count >= 4) {
+      return Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Container(
+                margin: EdgeInsets.only(top: 20),
+                child: Text(
+                  "Technologies:",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+              )
+            ],
+          ),
+          SingleChildScrollView(
+              child: Row(
+            children: [
+              Container(
+                margin: EdgeInsets.only(right: 20),
+                height: 100,
+                width: 100,
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: NetworkImage(
+                            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8wI9SP21c0_HvmOMV-Y4JNUlm7qyD4tzyLg&s"),
+                        fit: BoxFit.cover)),
+              ),
+              Container(
+                margin: EdgeInsets.only(left: 20),
+                height: 100,
+                width: 100,
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: NetworkImage(
+                            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDh2pXtAIC9iEaECNiUY6QWK1oOx6cazP2vIXpdVffVBLPs6fNx8"))),
+              )
+            ],
+          ))
         ],
       );
     } else {
@@ -123,13 +167,15 @@ class _Screen1State extends State<Screen1> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.amber,
-        title: Text("Screen1"),
+        centerTitle: true,
+        title: Text("Profilo"),
       ),
       body: Column(
         children: [
           mytext(),
           myContainer(),
           mySkills(),
+          technoLogies(),
         ],
       ),
       floatingActionButton: FloatingActionButton(
